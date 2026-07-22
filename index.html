@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>K Pearce Studio — Surface Pattern Design</title>
+<title>K Pearce Studio: Surface Pattern Design</title>
 <meta name="description" content="Designs for a life well-wandered. K Pearce Studio is an Australian surface pattern design studio, available for licensing.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&family=Cormorant+Garamond:ital@0;1&display=swap" rel="stylesheet">
 <style>
   :root {
+    --white: #FFFFFF;
     --cream: #F6F1E7;
     --cream-deep: #E4D6AF;
     --sage: #7C8969;
@@ -79,14 +80,25 @@
     margin: 0 auto;
   }
 
+  .hero-tagline p {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: clamp(16px, 2vw, 20px);
+    color: var(--charcoal);
+    line-height: 1.5;
+    max-width: 480px;
+    margin: 1rem auto 0;
+  }
+
   /* Bio */
   .bio {
+    background: var(--white);
     padding: 5rem 1.5rem 5rem;
   }
 
   .bio-inner {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 2.5rem;
     max-width: 720px;
     margin: 0 auto;
@@ -108,22 +120,29 @@
     object-position: center 15%;
   }
 
-  .bio p {
+  .bio-text {
     flex: 1;
+  }
+
+  .bio-text p {
     font-size: 20px;
     font-weight: 300;
     color: var(--charcoal);
     text-align: left;
   }
 
+  .bio-text p + p {
+    margin-top: 1.25rem;
+  }
+
   @media (max-width: 560px) {
-    .bio-inner { flex-direction: column; text-align: center; gap: 1.5rem; }
-    .bio p { text-align: center; }
+    .bio-inner { flex-direction: column; align-items: center; gap: 1.5rem; }
   }
 
   /* Supporting work */
   .work {
-    padding: 0 1.5rem 5rem;
+    background: var(--cream);
+    padding: 4.5rem 1.5rem;
   }
 
   .work-heading {
@@ -195,6 +214,10 @@
     color: var(--cream);
   }
 
+  .licensing p + p {
+    margin-top: 1.25rem;
+  }
+
   .licensing a {
     color: var(--cream);
     border-bottom: 1px solid var(--cream);
@@ -249,13 +272,18 @@
   <section class="hero" aria-label="Golden Blossoms pattern, hero">
     <div class="hero-tagline">
       <h1>Designs for a life well-wandered.</h1>
+      <p>Hand-drawn surface pattern collections inspired by nature, collected stories, and the quiet wonder found in everyday adventures.</p>
     </div>
   </section>
 
   <section class="bio">
     <div class="bio-inner">
       <div class="bio-photo"><img src="images/headshot.jpg" alt="Kate Pearce"></div>
-      <p>Hello, I'm Kate. I'm an Australian surface pattern designer whose work draws on nature, treasured childhood memories, and the small moments of family life.</p>
+      <div class="bio-text">
+        <p>Hi, I'm Kate, the illustrator and surface pattern designer behind K Pearce Studio.</p>
+        <p>Originally from a small town in New Hampshire and now raising my family on Australia's east coast, I create playful, hand-drawn patterns inspired by nature, collected stories, and the quiet wonder found in everyday adventures.</p>
+        <p>Every design begins as a pencil sketch or a splash of watercolour before being carefully brought to life digitally. My hope is that my work becomes part of people's stories, finding its way into well-loved quilts, handwritten notes, thoughtfully wrapped gifts and the everyday adventures that become our favourite memories.</p>
+      </div>
     </div>
   </section>
 
@@ -291,7 +319,8 @@
 
   <section class="licensing">
     <h2>Let's Collaborate</h2>
-    <p>My work is available for licensing. I offer repeat patterns, coordinates, and hero prints across categories including homewares, fabric, stationery, and gift. To enquire or get in touch, reach me at <a href="mailto:hello@kpearce.studio">hello@kpearce.studio</a>.</p>
+    <p>My work is available for licensing across homewares, fabric, stationery, gift and more. I create hand-drawn surface pattern collections including hero prints, coordinates and supporting patterns, with each collection built around a story, a place, or a moment worth remembering.</p>
+    <p>For licensing enquiries and collaborations, please get in touch at <a href="mailto:hello@kpearce.studio">hello@kpearce.studio</a>.</p>
   </section>
 
   <footer>
