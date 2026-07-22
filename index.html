@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>K Pearce Studio — Surface Pattern Design</title>
+<meta name="description" content="Designs for a life well-wandered. K Pearce Studio is an Australian surface pattern design studio, available for licensing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&family=Cormorant+Garamond:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F6F1E7;
+    --cream-deep: #E4D6AF;
+    --sage: #7C8969;
+    --sage-dark: #5B6650;
+    --charcoal: #3D3B32;
+    --font-sans: 'Avenir Next', Avenir, 'Nunito Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-sans);
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--charcoal);
+    background: var(--cream);
+    line-height: 1.6;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* Header */
+  header {
+    display: flex;
+    align-items: center;
+    padding: 2rem 2.5rem;
+  }
+
+  .logo {
+    font-size: 17px;
+    letter-spacing: 0.22em;
+    font-weight: 600;
+    color: var(--charcoal);
+  }
+
+  .hero {
+    height: 62vh;
+    min-height: 380px;
+    background-color: var(--cream-deep);
+    background-image: url('images/hero.png');
+    background-size: 800px 854px;
+    background-repeat: repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-tagline {
+    background: rgba(246, 241, 231, 0.85);
+    padding: 3rem 4rem;
+    border-radius: 10px;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .hero-tagline h1 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-style: italic;
+    font-size: clamp(28px, 4.2vw, 60px);
+    color: var(--charcoal);
+    white-space: nowrap;
+    margin: 0 auto;
+  }
+
+  /* Bio */
+  .bio {
+    padding: 5rem 1.5rem 5rem;
+  }
+
+  .bio-inner {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .bio-photo {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--cream-deep);
+  }
+
+  .bio-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+  }
+
+  .bio p {
+    flex: 1;
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--charcoal);
+    text-align: left;
+  }
+
+  @media (max-width: 560px) {
+    .bio-inner { flex-direction: column; text-align: center; gap: 1.5rem; }
+    .bio p { text-align: center; }
+  }
+
+  /* Supporting work */
+  .work {
+    padding: 0 1.5rem 5rem;
+  }
+
+  .work-heading {
+    text-align: center;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(30px, 4.8vw, 40px);
+    color: var(--charcoal);
+    margin-bottom: 2.25rem;
+  }
+
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .work-tile {
+    aspect-ratio: 4 / 5;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .work-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .work-tile-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--sage-dark);
+    background: rgba(248, 246, 240, 0.88);
+    padding: 4px 9px;
+    border-radius: 3px;
+  }
+
+  /* Licensing */
+  .licensing {
+    background: var(--sage);
+    padding: 5.5rem 1.5rem;
+    text-align: center;
+  }
+
+  .licensing h2 {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(38px, 6vw, 52px);
+    color: var(--cream);
+    margin-bottom: 1.25rem;
+  }
+
+  .licensing p {
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--cream);
+  }
+
+  .licensing a {
+    color: var(--cream);
+    border-bottom: 1px solid var(--cream);
+    font-weight: 400;
+  }
+
+  .licensing a:hover { color: var(--charcoal); border-color: var(--charcoal); }
+
+  /* Footer / contact */
+  footer {
+    text-align: center;
+    padding: 3.5rem 1.5rem 3rem;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.75rem;
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sage-dark);
+    margin-bottom: 2rem;
+  }
+
+  .social-links a:hover { color: var(--charcoal); }
+
+  .copyright {
+    font-size: 13px;
+    color: var(--sage-dark);
+    letter-spacing: 0.04em;
+  }
+
+  @media (max-width: 640px) {
+    header { padding: 1.5rem; }
+    .hero { height: 42vh; min-height: 260px; }
+    .hero-tagline { padding: 1.25rem 1.5rem; }
+    .hero-tagline h1 { white-space: normal; }
+    .bio { padding: 3.5rem 1.25rem 3rem; }
+    .work-grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    .licensing { padding: 3.5rem 1.25rem; }
+    footer { padding: 3.5rem 1.25rem 3rem; }
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">K PEARCE STUDIO</div>
+  </header>
+
+  <section class="hero" aria-label="Golden Blossoms pattern, hero">
+    <div class="hero-tagline">
+      <h1>Designs for a life well-wandered.</h1>
+    </div>
+  </section>
+
+  <section class="bio">
+    <div class="bio-inner">
+      <div class="bio-photo"><img src="images/headshot.jpg" alt="Kate Pearce"></div>
+      <p>Hello, I'm Kate. I'm an Australian surface pattern designer whose work draws on nature, treasured childhood memories, and the small moments of family life.</p>
+    </div>
+  </section>
+
+  <section class="work">
+    <h2 class="work-heading">Orchard Morning Collection</h2>
+    <div class="work-grid">
+      <div class="work-tile">
+        <img src="images/apple-harvest.png" alt="Apple Harvest pattern">
+        <span class="work-tile-caption">Apple Harvest</span>
+      </div>
+      <div class="work-tile">
+        <img src="images/autumn-drift.png" alt="Autumn Drift pattern">
+        <span class="work-tile-caption">Autumn Drift</span>
+      </div>
+      <div class="work-tile">
+        <img src="images/golden-blossoms.png" alt="Golden Blossoms pattern">
+        <span class="work-tile-caption">Golden Blossoms</span>
+      </div>
+      <div class="work-tile">
+        <img src="images/sunlit-rows.png" alt="Sunlit Rows pattern">
+        <span class="work-tile-caption">Sunlit Rows</span>
+      </div>
+      <div class="work-tile">
+        <img src="images/morning-mist.png" alt="Morning Mist pattern">
+        <span class="work-tile-caption">Morning Mist</span>
+      </div>
+      <div class="work-tile">
+        <img src="images/orchard-grid.png" alt="Orchard Grid pattern">
+        <span class="work-tile-caption">Orchard Grid</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="licensing">
+    <h2>Let's Collaborate</h2>
+    <p>My work is available for licensing. I offer repeat patterns, coordinates, and hero prints across categories including homewares, fabric, stationery, and gift. To enquire or get in touch, reach me at <a href="mailto:hello@kpearce.studio">hello@kpearce.studio</a>.</p>
+  </section>
+
+  <footer>
+    <div class="social-links">
+      <a href="https://www.instagram.com/kpearce.studio" target="_blank" rel="noopener" aria-label="Instagram (opens in new tab)">Instagram</a>
+      <a href="https://au.pinterest.com/0l5c1svv893v3e34lb2ynquizp2gvk/" target="_blank" rel="noopener" aria-label="Pinterest (opens in new tab)">Pinterest</a>
+    </div>
+    <p class="copyright">© 2026 K Pearce Studio</p>
+  </footer>
+
+</body>
+</html>
